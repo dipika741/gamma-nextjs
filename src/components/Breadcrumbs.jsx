@@ -1,13 +1,13 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Breadcrumbs = () => {
-  const location = useLocation();
+  const pathname = usePathname();
 
-  // Split the pathname into an array, removing empty segments
-  const pathSegments = location.pathname
-    .split("/")
-    .filter((segment) => segment !== "");
+  // Split the path into segments and remove empty parts
+  const pathSegments = pathname.split("/").filter((segment) => segment !== "");
 
   return (
     <div className="breadcrumbs section-box">
@@ -15,21 +15,19 @@ const Breadcrumbs = () => {
         <div className="container">
           <ul className="breadcrumb">
             <li>
-              <Link className="font-xs color-gray-1000" to="/">
+              <Link className="font-xs color-gray-1000" href="/">
                 Home
               </Link>
             </li>
             {pathSegments.map((segment, index) => {
-              // Create the path dynamically
               const path = `/${pathSegments.slice(0, index + 1).join("/")}`;
-              // Format the segment for display (capitalize first letter)
               const formattedSegment =
                 segment.charAt(0).toUpperCase() +
                 segment.slice(1).replace(/-/g, " ");
 
               return (
                 <li key={path}>
-                  <Link className="font-xs color-gray-500" to={path}>
+                  <Link className="font-xs color-gray-500" href={path}>
                     {formattedSegment}
                   </Link>
                 </li>

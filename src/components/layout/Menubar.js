@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { categories } from "@/data/products";
+import slugify from "@/utils/slugify";
 
 const Menubar = () => {
   return (
@@ -19,12 +21,52 @@ const Menubar = () => {
                 <nav className="nav-main-menu d-none d-xl-block">
                   <ul className="main-menu">
                     <li>
-                      <Link href="/">Homes</Link>
+                      <Link href="/">Home</Link>
                     </li>
                     <li>
                       <Link href="/about">About Us</Link>
                     </li>
+
                     <li className="has-children">
+                      <Link href="#">Products</Link>
+                      <ul className="sub-menu">
+                        {categories.map((category) => (
+                          <li key={category}>
+                            <Link href={`/${slugify(category)}`}>
+                              {category}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+
+                    {/* <li className="has-children">
+                      <Link href="#">Products</Link>
+                      <ul className="sub-menu">
+                        {categories.map((cat) => (
+                          <li key={cat}>
+                            <Link href={`/products/category/${slugify(cat)}`}>
+                              {cat}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li> */}
+
+                    {/* <li className="has-children">
+                      <Link href="#">Products</Link>
+                      <ul className="sub-menu">
+                        {categories.map((category) => (
+                          <li key={category}>
+                            <Link href={`/products/category/${slugify(category)}`}>
+                              {category}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li> */}
+
+                    {/* <li className="has-children">
                       <Link href="#">Products</Link>
                       <ul className="sub-menu">
                         <li>
@@ -66,7 +108,7 @@ const Menubar = () => {
                           <Link href="#">Food Testing Equipment</Link>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href="/services">Services</Link>
                     </li>

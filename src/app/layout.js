@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import FooterScripts from "@/components/FooterScripts";
 import Header from "@/components/layout/Header";
 import Sidebar from "@/components/layout/Sidebar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 // Optional but good for SEO
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Header />
+        <Breadcrumbs />
         <Sidebar />
         <main>{children}</main>
         <Footer />

@@ -1,3 +1,6 @@
+"use client";
+
+import Image from "next/image";
 import React from "react";
 
 const services = [
@@ -29,14 +32,20 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="section-box mt-50 mb-50">
+    <section className="section-box mt-50 ">
       <div className="container">
         <ul className="list-col-5">
           {services.map((service) => (
             <li key={service.id}>
               <div className="item-list">
                 <div className="icon-left">
-                  <img src={service.icon} alt="Service Icon" />
+                  <Image
+                    src={service.icon}
+                    alt={service.title || "Service Icon"}
+                    width={50}
+                    height={50}
+                    unoptimized // Remove this if you're using local images in /public
+                  />
                 </div>
                 <div className="info-right">
                   <h5 className="font-lg-bold color-gray-100">
