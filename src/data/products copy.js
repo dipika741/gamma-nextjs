@@ -1,0 +1,141 @@
+// src/data/products.js
+
+export const laboratoryProducts = [
+    {
+        name: "Autoclave Sterilizer",
+        category: "Laboratory Equipments",
+        discount: "-25%",
+        image: "assets/imgs/products/laboratory-equipment/autoclave-sterilizer/autoclave-sterilizer.jpg",
+        available: 253,
+        sold: 168,
+        description: "The best supplier of Autoclave Sterilizer",
+    },
+    {
+        name: "Block Heater",
+        category: "Laboratory Equipments",
+        discount: "-15%",
+        image: "assets/imgs/products/laboratory-equipment/block-heater/block-heater.jpg",
+        available: 568,
+        sold: 382,
+        description: "The best supplier of Block Heater",
+    },
+    {
+        name: "Centrifuge",
+        category: "Laboratory Equipments",
+        discount: "-30%",
+        image: "assets/imgs/products/laboratory-equipment/centrifuge/centrifuge.jpg",
+        available: 487,
+        sold: 113,
+        description: "The best supplier of Centrifuge",
+    },
+    {
+        name: "Chamber",
+        category: "Laboratory Equipments",
+        discount: "-10%",
+        image: "assets/imgs/products/laboratory-equipment/chamber/chamber.jpg",
+        available: 392,
+        sold: 240,
+        description: "The best supplier of Chamber",
+    },
+    {
+        name: "Circulation Bath",
+        category: "Laboratory Equipments",
+        discount: "-20%",
+        image: "assets/imgs/products/laboratory-equipment/circulation-bath/circulation-bath.jpg",
+        available: 179,
+        sold: 57,
+        description: "The best supplier of Circulation Bath",
+    },
+    {
+        name: "PH Meter",
+        category: "Analytical Instruments",
+        subcategory: "Accessories",
+        image: "assets/imgs/products/analytical-instruments/accessories/ph-meter.jpg",
+        description: "High-quality pH Meter.",
+    }
+];
+export const scientificProducts = [
+    {
+        name: "PH Meter",
+        category: "Analytical Instruments",
+        subcategory: "Accessories",
+        image: "assets/imgs/products/analytical-instruments/accessories/ph-meter.jpg",
+        description: "High-quality pH Meter.",
+    },
+    {
+        name: "Block Heater",
+        category: "Laboratory Equipments",
+        discount: "-15%",
+        image: "assets/imgs/products/laboratory-equipment/block-heater/block-heater.jpg",
+        available: 568,
+        sold: 382,
+        description: "The best supplier of Block Heater",
+    },
+    {
+        name: "Centrifuge",
+        category: "Laboratory Equipments",
+        discount: "-30%",
+        image: "assets/imgs/products/laboratory-equipment/centrifuge/centrifuge.jpg",
+        available: 487,
+        sold: 113,
+        description: "The best supplier of Centrifuge",
+    },
+    {
+        name: "86°C Ultra Low Temperature Freezer",
+        category: "Laboratory Refrigerator",
+        image: "assets/imgs/products/laboratory-refrigerators/main/86c-ultra-low-temperature-freezer.jpg",
+        discount: 19,
+    },
+    {
+        name: "Ultra Low Temperature Freezer-10°C To -86°C",
+        category: "Laboratory Refrigerator",
+        image: "assets/imgs/products/laboratory-refrigerators/main/ultra-low-temperature-freezer-10c-to-86c.jpg",
+        discount: 17,
+    },
+    {
+        name: "Circulation Bath",
+        category: "Laboratory Equipments",
+        image: "assets/imgs/products/laboratory-equipment/circulation-bath/circulation-bath.jpg",
+        description: "The best supplier of Circulation Bath",
+        discount: 17,
+    },
+    {
+        name: "Chamber",
+        category: "Laboratory Equipments",
+        discount: "-10%",
+        image: "assets/imgs/products/laboratory-equipment/chamber/chamber.jpg",
+        available: 392,
+        sold: 240,
+        description: "The best supplier of Chamber",
+    },
+    {
+        name: "Chamber Analytical Instruments",
+        category: "Analytical Instruments",
+        discount: "-10%",
+        image: "assets/imgs/products/laboratory-equipment/chamber/chamber.jpg",
+        available: 392,
+        sold: 240,
+        description: "The best supplier of Chamber",
+    },
+    {
+        name: "Block Heater",
+        category: "Laboratory Equipments",
+        discount: "-15%",
+        image: "assets/imgs/products/laboratory-equipment/block-heater/block-heater.jpg",
+        available: 568,
+        sold: 382,
+        description: "The best supplier of Block Heater",
+    },
+];
+export const productsData = [...laboratoryProducts, ...scientificProducts];
+
+export const categories = [
+    "Laboratory Equipments",
+    "Analytical Instruments",
+    "Material Testing Equipment",
+    "HPLC Consumables",
+    "Laboratory Glasswares",
+    "Laboratory Plasticwares",
+    "Laboratory Furnitures",
+    "Food Testing Equipment"
+];

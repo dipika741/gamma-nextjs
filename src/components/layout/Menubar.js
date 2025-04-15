@@ -32,7 +32,7 @@ const Menubar = () => {
                       <ul className="sub-menu">
                         {categories.map((category) => (
                           <li key={category}>
-                            <Link href={`/${slugify(category)}`}>
+                            <Link href={`/products/${slugify(category)}`}>
                               {category}
                             </Link>
                           </li>

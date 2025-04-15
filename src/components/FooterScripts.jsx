@@ -14,7 +14,7 @@ const loadScript = (src) => {
     script.src = src;
     script.async = true;
     script.onload = () => {
-      console.log(`✅ Loaded: ${src}`);
+      // console.log(`✅ Loaded: ${src}`);
       resolve();
     };
     script.onerror = (err) => {
@@ -35,7 +35,7 @@ const loadFooterScripts = async () => {
 
     // Swiper
     //await loadScript("/assets/js/vendors/swiper-bundle.min.js");
-    console.log("swipper js not loaded externally");
+    // console.log("swipper js not loaded externally");
     // Other vendor scripts
     const otherScripts = [
       "/assets/js/vendors/jquery-migrate-3.3.0.min.js",
@@ -57,7 +57,7 @@ const loadFooterScripts = async () => {
     ];
 
     await Promise.all(otherScripts.map(loadScript));
-    console.log("✅ All footer scripts loaded");
+    // console.log("✅ All footer scripts loaded");
   } catch (err) {
     console.error("❌ Failed to load footer scripts", err);
   }
@@ -69,7 +69,7 @@ const FooterScripts = () => {
 
     loadFooterScripts().then(() => {
       if (isMounted) {
-        console.log("✅ Footer scripts executed");
+        // console.log("✅ Footer scripts executed");
       }
     });
 
